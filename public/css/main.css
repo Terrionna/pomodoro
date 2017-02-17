@@ -1,0 +1,19 @@
+#tomato {
+  display: block;
+  margin: auto;
+  width: 20%;
+  height: 40%;
+}
+#display {
+  text-align: center;
+  font-family: Papyrus,fantasy;
+  font-size: 65px;
+}
+#start {
+ font-family: Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif;
+ font-weight: bold;
+}
+#pause {
+  font-family: Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif;
+  font-weight: bold;
+}

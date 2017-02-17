@@ -12,6 +12,8 @@ var Timer = {
     this.minutes = document.querySelector('#minutes');
     this.seconds = document.querySelector('#seconds');
     this.startButton = document.querySelector('#start');
+    this.pauseButton = document.querySelector('#pause');
+    this.modal = document.querySelector('#myModal')
   },
   render: function(){
   this.minutes.textContent = this.pad(this.minutesLeft);
@@ -19,11 +21,15 @@ var Timer = {
   },
   addListeners: function(){
     this.startButton.addEventListener('click', this.start.bind(this)); //the bind stament takes the meaning of "this" from add listeners and pushed that meaning tont the start function
+    this.pauseButton.addEventListener('click', this.pause.bind(this));
   },
   start: function(){
       if(!this.timer){
           this.timer = setInterval(this.tick.bind(this), 1000);
       }
+  },
+  pause: function(){
+    this.timer = clearInterval(this.timer);
   },
   tick: function(){
     if(this.secondsLeft === 0 && this.minutesLeft === 0){
@@ -42,6 +48,12 @@ var Timer = {
     this.decrementMinutes();
     this.decrementSeconds();
     this.render();
+  },
+  modal: function(){
+    if(this.isOnBreak) {
+      $("#myModal").modal('show');
+      console.log('modal')
+    }
   },
   decrementMinutes: function(){
     if(this.secondsLeft === 0){
