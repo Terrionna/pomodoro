@@ -43,17 +43,20 @@ var Timer = {
       }
       this.isOnBreak = !this.isOnBreak;
       this.render();
+      Push.create("Hello world!", {
+      body: "How's it hangin'?",
+      icon: 'https://cdn.pixabay.com/photo/2014/07/28/11/22/tape-403591_960_720.jpg',
+      timeout: 4000,
+      onClick: function () {
+        window.focus();
+        this.close();
+    }
+});
       return;
     }
     this.decrementMinutes();
     this.decrementSeconds();
     this.render();
-  },
-  modal: function(){
-    if(this.isOnBreak) {
-      $("#myModal").modal('show');
-      console.log('modal')
-    }
   },
   decrementMinutes: function(){
     if(this.secondsLeft === 0){

@@ -6,6 +6,7 @@
 }
 #display {
   text-align: center;
+  margin: 0;
   font-family: Papyrus,fantasy;
   font-size: 65px;
 }
