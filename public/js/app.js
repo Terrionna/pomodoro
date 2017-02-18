@@ -13,7 +13,7 @@ var Timer = {
     this.seconds = document.querySelector('#seconds');
     this.startButton = document.querySelector('#start');
     this.pauseButton = document.querySelector('#pause');
-    this.modal = document.querySelector('#myModal')
+    this.alienSound = document.querySelector('#myAudio')
   },
   render: function(){
   this.minutes.textContent = this.pad(this.minutesLeft);
@@ -33,6 +33,7 @@ var Timer = {
   },
   tick: function(){
     if(this.secondsLeft === 0 && this.minutesLeft === 0){
+      this.playAudio();
       clearInterval(this.timer);
       this.timer = !this.timer;
       if(this.isOnBreak){
@@ -89,6 +90,9 @@ var Timer = {
       this.numberOfBreaks = 0;
     }
       this.secondsLeft = 0;
+  },
+  playAudio: function(){
+    this.alienSound.play();
   },
 };
 Timer.init();
