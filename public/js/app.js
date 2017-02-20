@@ -13,7 +13,7 @@ var Timer = {
     this.seconds = document.querySelector('#seconds');
     this.startButton = document.querySelector('#start');
     this.pauseButton = document.querySelector('#pause');
-    this.alienSound = document.querySelector('#myAudio')
+    this.alienSound = document.querySelector('#myAudio');
   },
   render: function(){
   this.minutes.textContent = this.pad(this.minutesLeft);

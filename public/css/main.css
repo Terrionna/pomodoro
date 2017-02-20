@@ -1,20 +1,21 @@
 body {
-  background-image: url(https://cdn.pixabay.com/photo/2017/01/31/21/56/food-2027563_960_720.png);
+  background-image: url(https://docs.google.com/uc?export=download&id=0B0yA-ksW26KNcnRUdjBVWFZmNEk);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 200px 200px;
+  background-size: 250px 250px;
 }
 #display {
+  color: white;
   text-align: center;
   margin: auto;
-  margin-top: 190px;
+  margin-top: 250px;
   font-family: Papyrus,fantasy;
   font-size: 65px;
 }
 #start {
  font-family: Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif;
  font-weight: bold;
- margin-top: 75px;
+ margin-top: 100px;
  padding-top: 0px;
 }
 #pause {
