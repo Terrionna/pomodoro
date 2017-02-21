@@ -44,9 +44,9 @@ var Timer = {
       }
       this.isOnBreak = !this.isOnBreak;
       this.render();
-      Push.create("Hello world!", {
-      body: "How's it hangin'?",
-      icon: 'https://cdn.pixabay.com/photo/2014/07/28/11/22/tape-403591_960_720.jpg',
+      Push.create("You Are On A Break", {
+      body: "Studies show taking breaks makes one more productive.",
+      icon: 'https://docs.google.com/uc?export=download&id=0B0yA-ksW26KNcnRUdjBVWFZmNEk',
       timeout: 4000,
       onClick: function () {
         window.focus();
